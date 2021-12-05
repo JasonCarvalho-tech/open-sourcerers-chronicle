@@ -133,6 +133,21 @@ p, li { line-height: 2rem;
         padding-right: 2rem; //removed because,  why?
         vertical-align: baseline; }
 
+/* Chapter Author */
+div.post-author{
+    width: 80%;
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+    padding-top: 0;
+    text-align: right;
+    margin-right: -60%;
+    font-variant: small-caps;
+    font-size: 1.2em;
+    letter-spacing: 0.05rem;
+    font-style: italic;
+}
+/* end of chaper author styles */
+
 /* Chapter Epigraphs */
 div.epigraph { margin: 3.5636rem 0; }
 

@@ -1,14 +1,12 @@
-- link: //www.twitter.com/twitter_handle 
+- link:
   icon: icon-twitter
-- link: //plus.google.com/+googlePlusName 
-  icon: icon-google2
-- link: //github.com/GithubHandle 
+- link:
   icon: icon-github
-- link: //www.flickr.com/photos/FlickrUserID 
+- link:
   icon: icon-flickr3
-- link: /feed 
+- link:
   icon: icon-rss2
-- link: //vimeo.com/vimeo-id
+- link:
   icon: icon-vimeo2
-- link: //www.linkedin.com/
+- link:
   icon: icon-linkedin
