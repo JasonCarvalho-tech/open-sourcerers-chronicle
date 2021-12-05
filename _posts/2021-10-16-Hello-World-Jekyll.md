@@ -40,8 +40,8 @@ Posts are in the ```/_posts/``` directory, in the tufte-jekyll theme I used ther
 
 ### Adding a Favicon.
 
-I designed a favicon in [Krita](https://krita.org/en/), an free and open source painting program. Then followed a blog article by a guy called Paul Cochrane, you can view that at https://ptc-it.de/add-favicon-to-mm-jekyll-site/ , the article is faily detailed and will be useful if you are new, or you can follow how I did it for tufte-jekyll.
-Get the images you want to use, put it in the ```/assets/img/``` folder. There are multiple favicon generator sites you could use to make a favicon or use an image to generate one. After placing the favicon in the img direcory open up ```/_includes/head.html``` and in that file put this line in 
+I designed a favicon in [Krita](https://krita.org/en/), an free and open source digital art program; then followed a blog article by Paul Cochrane [https://ptc-it.de/add-favicon-to-mm-jekyll-site/](https://ptc-it.de/add-favicon-to-mm-jekyll-site/)[Archived](http://web.archive.org/web/20210614083222/https://ptc-it.de/add-favicon-to-mm-jekyll-site/), that article is more detailed and shows how to handle the website icon for a multitude of different browsers.
+Get the images you want to use, put it in the ```/assets/img/``` folder. There are multiple favicon generator sites that allow to make a favicon from scratch or use an image to generate one. After placing the favicon in the img direcory open up ```/_includes/head.html``` and insert this line anywhere under the ```<head>``` tag (I chose line 7).
 ```html
 <link rel="icon" type="image/png" sizes="32x32" href="{{site.baseurl}}/assets/img/favicon-32x32.png">
 ```
@@ -58,9 +58,14 @@ in the post.md file it will appear as
 to acheive this I needed to make a plugin and edits to the css file, I did this all on tufte-jekyll as I have no other experience with jekyll I don't know how it will transfer to other themes ect.
 To make the plugin make a file called ```postauthor.rb``` in the ```/_plugins``` directory. Then add these lines I've added comments to make it easy to digest.
 ``` ruby
+## Liquid tag 'postauthor' used to add an block to credit the author
+## in the main text area of the layout
+## Usage {% postauthor 'Author Name' %}
+
 module Jekyll
-  class RenderFullWidthTag < Liquid::Tag
-  require "shellwords"
+  class RenderPostAuthorTag < Liquid::Tag
+
+require "shellwords"
 
     def initialize(tag_name, text, tokens)
       super
@@ -68,15 +73,14 @@ module Jekyll
     end
 
     def render(context)
-      "<div><img class='fullwidth' src='#{@text[0]}'/></div> " +
-      "<p><span class='marginnote'>#{@text[1]}</span></p>"
+        "<div class='post-author'>#{@text[0]}</div>"
     end
   end
 end
 
-Liquid::Template.register_tag('fullwidth', Jekyll::RenderFullWidthTag)
+Liquid::Template.register_tag('postauthor', Jekyll::RenderPostAuthorTag )
    ```
-Open the ```css/tufte.scss``` file and put in these lines for to style the author tag as it is in this site. You can modify the styles are you want but these are the ones I used.
+Open the ```css/tufte.scss``` file and add these lines to style the author tag. You can modify the styles according to your needs.
 ``` scss
 div.post-author{
     width: 80%;
@@ -94,5 +98,5 @@ div.post-author{
 
 ## Conclusion
 
-So that's about it, there is a lot of work to do on this site it's very scuffed at the moment, but I might make it a repo, if I do significant changes to the theme. If I do make it a repo I'll link it here! Now to reap what I've sown and close this off with the author tag I created :)
+That's it, there is a lot of work to do on this site, it's very scuffed at the moment. If I do make it a repository with the sites code I'll link it here![repo](https://github.com/JasonCarvalho-tech/open-sourcerers-guild) Now to reap what I've sown and close this post off with the author tag I created :)
 {% postauthor 'Jason Carvalho' %}
