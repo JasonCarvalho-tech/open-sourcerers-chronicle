@@ -97,6 +97,6 @@ def autostart():
     helper.screens.setWallpaper()
 
 ```
-I have just modified the default config by placing the above code in the top after the copyright notice.
+I have modified the default config file by placing the above code in the top right after the copyright notice. The wallpaper got applied when I restarted my computer.
 Here is the repo with all the code: [https://github.com/JasonCarvalho-tech/qtile-config/tree/main](https://github.com/JasonCarvalho-tech/qtile-config/tree/main)
 {% postauthor 'Jason Carvalho' %}
