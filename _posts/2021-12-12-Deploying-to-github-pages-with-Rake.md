@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Deploying a Jekyll site to GitHub Pages with Rake"
-date:   2021-12-12 21:09:00
+date:   2021-12-12 00:00:00
 categories: jekyll open-sourcers-chronicle
 ---
 
