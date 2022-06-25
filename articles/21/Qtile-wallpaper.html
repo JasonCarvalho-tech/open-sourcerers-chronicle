@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Different wallpaper for each screen in Qtile</title>
+  <meta name="description" content="I use Qtile Qtile is a free and open source tiling window manager written in python. Refer: http://www.qtile.org  as the window manager for my system. The sy...">
+
+  <!--icons-->
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon-16x16.png">
+  <link rel="manifest" href="/assets/img/site.webmanifest">
+  <link rel="mask-icon" href="/assets/img/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="shortcut icon" href="/assets/img/favicon.ico">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="msapplication-config" content="/assets/img/browserconfig.xml">
+  <meta name="theme-color" content="#ffffff">
+
+  <!-- Google Fonts loaded here depending on setting in _data/options.yml true loads font, blank does not-->
+  
+    <link href='//fonts.googleapis.com/css?family=Lato:400,400italic' rel='stylesheet' type='text/css'>
+  
+  
+  <!-- Load up MathJax script if needed ... specify in /_data/options.yml file-->
+  
+    <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: [
+      "MathMenu.js",
+      "MathZoom.js",
+      "AssistiveMML.js",
+      "a11y/accessibility-menu.js"
+    ],
+    jax: ["input/TeX", "output/CommonHTML"],
+    TeX: {
+      extensions: [
+        "AMSmath.js",
+        "AMSsymbols.js",
+        "noErrors.js",
+        "noUndefined.js",
+      ]
+    }
+  });
+</script>
+
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+ <!--   <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+  
+
+  <link rel="stylesheet" type="text/css" href="/css/tufte.css">
+  <!-- <link rel="stylesheet" type="text/css" href="/css/print.css" media="print"> -->
+
+  <link rel="canonical" href="/articles/21/Qtile-wallpaper">
+
+  <link rel="alternate" type="application/rss+xml" title="Open Sourcerers' Guild" href="/feed.xml" />
+</head>
+
+  <body>
+    <!--- Header and nav template site-wide -->
+<header>
+    <nav class="group">
+	<a href="/"><img class="badge" src="/assets/img/logo_1.png" alt="OSG"></a>
+	
+		
+  	
+		
+		    
+		      <a href="/">The Chronicle</a>
+		    
+	    
+  	
+		
+		    
+		      <a href="/about/">About</a>
+		    
+	    
+  	
+		
+		    
+		      <a href="/css/print.css"></a>
+		    
+	    
+  	
+		
+  	
+	</nav>
+</header>
+
+    <article class="group">
+      <h1>Different wallpaper for each screen in Qtile</h1>
+<p class="subtitle">November 6, 2021</p>
+
+<p><span class="newthought">I use <a href="http://www.qtile.org/">Qtile</a></span> <label for="One" class="margin-toggle sidenote-number"></label><input type="checkbox" id="One" class="margin-toggle" /><span class="sidenote">Qtile is a free and open source tiling window manager written in python. Refer: <a href="http://www.qtile.org/">http://www.qtile.org</a> </span> as the window manager for my system. The system is a laptop with one monitor connected via HDMI, but sometimes just the laptop. When I first installed Qtile I tried to set the wallpapers and failed. <!--more--> I could get the same wallpaper on both the laptop and HDMI display but not 2 different ones. Since then with a bit of python I have achieved that. The process is documented here.
+I’m assuming you already have installed and set up qtile. All the code can be found in this repo: <a href="https://github.com/JasonCarvalho-tech/qtile-config/tree/main">https://github.com/JasonCarvalho-tech/qtile-config/tree/main</a></p>
+
+<h2 id="tldr-setting-the-wallpaper">TLDR: Setting the wallpaper</h2>
+<p>The wallpaper can be set by using a package called <a href="https://wiki.archlinux.org/title/Feh">feh</a>. If you use Arch Linux the package can be installed through the terminal by:</p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">sudo </span>pacman <span class="nt">-Sy</span> feh
+</code></pre></div></div>
+<p>After installing wallpapers for 2 screens for instance can be set by running:</p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>feh <span class="nt">--bg-center</span> path/to/file/for/first/monitor path/to/file/for/second/monitor
+</code></pre></div></div>
+<p>Instead of the <code class="language-plaintext highlighter-rouge">--bg-center</code> flag you could use <code class="language-plaintext highlighter-rouge">--bg-max</code> or <code class="language-plaintext highlighter-rouge">--bg-fill</code> among others. Refer the <a href="https://wiki.archlinux.org/title/Feh">ArchWiki article</a> for more examples or type:</p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>feh <span class="nt">--help</span>
+</code></pre></div></div>
+<p>to see more information about the flags and other options.
+Note that the wallpapers set will be lost every session. The rest of this post will detail how to retain the wallpaper for the next session and then later how to program the wallpaper to change every day. Both of these processes are done by listening to qtile startup via hooks qtile provides.</p>
+
+<h2 id="setting-up-the-screens">Setting up the screens.</h2>
+<p>Before setting up the screens, a script is run that will use xrandr to set the second screen’s resolution and relative position to my laptop screen. I have put this script in my bin directory(which is in my PATH) so I can run it directly from console. The file is called acer-screen and these are it’s contents.</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#!/bin/bash</span>
+xrandr <span class="nt">--output</span> HDMI1 <span class="nt">--mode</span> 1280x960 <span class="nt">--right-of</span> eDP1 <span class="p">;</span> xrandr <span class="nt">--output</span> HDMI-1-1 <span class="nt">--mode</span> 1280x960 <span class="nt">--right-of</span> eDP-1-1 <span class="p">;</span> xrandr <span class="nt">--output</span> HDMI-1 <span class="nt">--mode</span> 1280x960 <span class="nt">--right-of</span> eDP-1
+</code></pre></div></div>
+<p>the main command is <code class="language-plaintext highlighter-rouge">xrandr --ouput HDMI1 --mode 1280x960 --right-of eDP1</code> which sets the resolution of my second monitor, called HDMI1, to 1280 by 960 and sets it to the right of my laptop. The command is repeated with HDMI-1-1, eDP-1-1 and HDMI-1, eDP-1 because my monitor names change for some reason when I use <a href="https://github.com/Askannz/optimus-manager">optimus-manager</a> to switch my graphics card mode, repeating the command with the alternate HDMI1 and eDP1 names will not be necessary if you don’t use optimus manager. You might also have to change the resolution based on your monitor. Have a look at the ArchWiki post for more information on xrandr or use <code class="language-plaintext highlighter-rouge">xrandr --help</code>. We will call this script when we start qtile when the system starts.</p>
+
+<h2 id="creating-the-python-module">Creating the python module</h2>
+<p>Instead of running the code directly in the qtile config.py file, we could run the code by making a module and then importing and running a function of the module in the qtile config file. This might make additional features easier to add. And also makes testing easier. You can test by running a test.py file that contains the import to the module and the functions. I created this module in the same directory as the qtile config file, which in my case is in <code class="language-plaintext highlighter-rouge">~/.config/qtile/config.py</code>. Here is the directory structure for the module.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>qtilehelper/
+|-screens.py
+|-__init__.py
+</code></pre></div></div>
+<p>The __init__.py file contains the following code:</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">screens</span>
+</code></pre></div></div>
+<p>screens.py will contain the code to set up the screens and another function to set the wallpaper based on the day.</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">datetime</span>
+<span class="kn">import</span> <span class="nn">gi</span>
+<span class="n">gi</span><span class="p">.</span><span class="n">require_version</span><span class="p">(</span><span class="s">"Gdk"</span><span class="p">,</span> <span class="s">"3.0"</span><span class="p">)</span>
+<span class="kn">from</span> <span class="nn">gi.repository</span> <span class="kn">import</span> <span class="n">Gdk</span>
+
+<span class="k">def</span> <span class="nf">setupScreens</span><span class="p">():</span>
+    <span class="k">if</span> <span class="n">Gdk</span><span class="p">.</span><span class="n">Display</span><span class="p">.</span><span class="n">get_default</span><span class="p">().</span><span class="n">get_n_monitors</span><span class="p">()</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="n">os</span><span class="p">.</span><span class="n">system</span><span class="p">(</span><span class="s">'acer-screen'</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">setWallpaper</span><span class="p">():</span>
+    <span class="n">path</span> <span class="o">=</span> <span class="s">'/home/jason/Personal/Pictures/wallpaper/'</span> <span class="c1">#path to your wallpaper files
+</span>    <span class="n">wallpapers</span> <span class="o">=</span> <span class="n">os</span><span class="p">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+    <span class="n">day</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">datetime</span><span class="p">.</span><span class="n">datetime</span><span class="p">.</span><span class="n">now</span><span class="p">().</span><span class="n">timestamp</span><span class="p">())</span><span class="o">//</span><span class="mi">86400</span>
+    <span class="n">wallpaper1_path</span> <span class="o">=</span> <span class="n">path</span> <span class="o">+</span> <span class="n">wallpapers</span><span class="p">[</span><span class="n">day</span><span class="o">%</span><span class="nb">len</span><span class="p">(</span><span class="n">wallpapers</span><span class="p">)]</span>
+    <span class="k">if</span> <span class="n">Gdk</span><span class="p">.</span><span class="n">Display</span><span class="p">.</span><span class="n">get_default</span><span class="p">().</span><span class="n">get_n_monitors</span><span class="p">()</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="n">wallpaper2_path</span> <span class="o">=</span> <span class="n">path</span> <span class="o">+</span> <span class="n">wallpapers</span><span class="p">[(</span><span class="n">day</span><span class="o">%</span><span class="nb">len</span><span class="p">(</span><span class="n">wallpapers</span><span class="p">))</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span>
+        <span class="n">os</span><span class="p">.</span><span class="n">system</span><span class="p">(</span><span class="s">'feh --bg-max '</span> <span class="o">+</span> <span class="n">wallpaper1_path</span> <span class="o">+</span> <span class="s">' '</span> <span class="o">+</span> <span class="n">wallpaper2_path</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">os</span><span class="p">.</span><span class="n">system</span><span class="p">(</span><span class="s">'feh --bg-max '</span> <span class="o">+</span> <span class="n">wallpaper1_path</span><span class="p">)</span>
+</code></pre></div></div>
+<p><code class="language-plaintext highlighter-rouge">setupScreens()</code> is pretty self explanitory, it checks if there are 2 screens and if there are it runs the command <code class="language-plaintext highlighter-rouge">acer-screen</code>.
+<code class="language-plaintext highlighter-rouge">setWallpaper()</code> needs a little bit of explanation. You need to set the path variable to wherever you wallpapers are stored. The day variable contains the number of days that has elapsed since January 1, 1970, we get this by dividing a POSIX timestamp by the number of seconds in a day(86400). Finding the modulus of this value and the ammount of files in the wallpaper directory we will get the wallpaper for the day. The if statement checks if there are 2 monitors, if there are 2, the script substracts 1 to get the wallpaper for my external monitor, and runs the command to set wallpapers for both screens. If there is only one monitor the command is run to set the wallpaper for one monitor.</p>
+
+<h2 id="using-the-module-in-the-config-with-hooks">Using the module in the config with hooks</h2>
+<p>In order to run code when events occur in qtile, you have to utilize <a href="https://docs.qtile.org/en/v0.18.0/manual/ref/hooks.html#ref-hooks">hooks</a>. The 2 hooks of intrest to us are <code class="language-plaintext highlighter-rouge">startup\_once()</code> and <code class="language-plaintext highlighter-rouge">startup()</code>. We will attach <code class="language-plaintext highlighter-rouge">setupScreens()</code> to <code class="language-plaintext highlighter-rouge">startup\_once()</code> and <code class="language-plaintext highlighter-rouge">setWallpaper()</code> to <code class="language-plaintext highlighter-rouge">startup()</code></p>
+
+<p>Why do we set the functions to seperate hooks?
+I too thought we could just set both to startup but this presents a problem. Let’s say for some reason we want to set up a second monitor differently than in acer-screen, maybe it is a different monitor with a different resolution. We could set that monitor up using <code class="language-plaintext highlighter-rouge">xrandr</code> after start up and attempt to set the monitors by pressing <code class="language-plaintext highlighter-rouge">Mod+Ctrl+r</code> which will restart Qtile. Now we will hit a problem because the startup function will trigger and if we attached <code class="language-plaintext highlighter-rouge">setupScreens()</code> to <code class="language-plaintext highlighter-rouge">startup()</code> the chages we made using xrandr will be undone because <code class="language-plaintext highlighter-rouge">acer-screen</code> will be run.
+To prevent this I attached <code class="language-plaintext highlighter-rouge">setupScreens()</code> to <code class="language-plaintext highlighter-rouge">startup\_once()</code> which only runs the first time qtile runs when you startup your computer.
+Here is the code for <code class="language-plaintext highlighter-rouge">config.py</code>, i.e. your qtile config file. I’ve only put the top portion as there is quite a lot of code in that file.</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">List</span>  <span class="c1"># noqa: F401
+</span>
+<span class="kn">from</span> <span class="nn">libqtile</span> <span class="kn">import</span> <span class="n">bar</span><span class="p">,</span> <span class="n">layout</span><span class="p">,</span> <span class="n">widget</span><span class="p">,</span> <span class="n">hook</span>
+<span class="kn">from</span> <span class="nn">libqtile.config</span> <span class="kn">import</span> <span class="n">Click</span><span class="p">,</span> <span class="n">Drag</span><span class="p">,</span> <span class="n">Group</span><span class="p">,</span> <span class="n">Key</span><span class="p">,</span> <span class="n">Match</span><span class="p">,</span> <span class="n">Screen</span>
+<span class="kn">from</span> <span class="nn">libqtile.lazy</span> <span class="kn">import</span> <span class="n">lazy</span>
+<span class="kn">from</span> <span class="nn">libqtile.utils</span> <span class="kn">import</span> <span class="n">guess_terminal</span>
+
+<span class="c1"># custom imports
+</span><span class="kn">import</span> <span class="nn">qtilehelper</span> <span class="k">as</span> <span class="n">helper</span>
+
+<span class="o">@</span><span class="n">hook</span><span class="p">.</span><span class="n">subscribe</span><span class="p">.</span><span class="n">startup_once</span>
+<span class="k">def</span> <span class="nf">autostart</span><span class="p">():</span>
+    <span class="n">helper</span><span class="p">.</span><span class="n">screens</span><span class="p">.</span><span class="n">setupScreens</span><span class="p">()</span>
+
+<span class="o">@</span><span class="n">hook</span><span class="p">.</span><span class="n">subscribe</span><span class="p">.</span><span class="n">startup</span>
+<span class="k">def</span> <span class="nf">autostart</span><span class="p">():</span>
+    <span class="n">helper</span><span class="p">.</span><span class="n">screens</span><span class="p">.</span><span class="n">setWallpaper</span><span class="p">()</span>
+
+</code></pre></div></div>
+<p>I have modified the default config file by placing the above code in the top right after the copyright notice. The wallpaper got applied when I restarted my computer.
+Here is the repo with all the code: <a href="https://github.com/JasonCarvalho-tech/qtile-config/tree/main">https://github.com/JasonCarvalho-tech/qtile-config/tree/main</a></p>
+<div class="post-author">Jason Carvalho</div>
+
+
+
+    </article>
+    <span class="print-footer">Different wallpaper for each screen in Qtile - November 6, 2021 - Open Sourcerers Guild</span>
+    <footer>
+  <hr class="slender">
+  <ul class="footer-links">
+    <li><a href="mailto:hate@spam.net"><span class="icon-mail3"></span></a></li>    
+    
+      <li>
+        <a href=""><span class="icon-twitter"></span></a>
+      </li>
+    
+      <li>
+        <a href=""><span class="icon-github"></span></a>
+      </li>
+    
+      <li>
+        <a href=""><span class="icon-flickr3"></span></a>
+      </li>
+    
+      <li>
+        <a href=""><span class="icon-rss2"></span></a>
+      </li>
+    
+      <li>
+        <a href=""><span class="icon-vimeo2"></span></a>
+      </li>
+    
+      <li>
+        <a href=""><span class="icon-linkedin"></span></a>
+      </li>
+      
+  </ul>
+<div class="credits">
+<span>&copy; 2022 &nbsp;&nbsp;OPEN SOURCERERS GUILD</span></br> <br>
+<!--span>This site created with the <a href="//github.com/clayh53/tufte-jekyll">Tufte theme for Content-centric blogging </a> in <a href="//jekyllrb.com">Jekyll</a>.</span-->
+</div>  
+</footer>
+
+  </body>
+</html>

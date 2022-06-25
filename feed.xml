@@ -1,31 +1,326 @@
----
-layout: null
-nav_exclude: true
----
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>{{ site.title | xml_escape }}</title>
-    <description>{{ site.description | xml_escape }}</description>
-    <link>{{ site.url }}{{ site.baseurl }}/</link>
-    <atom:link href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" rel="self" type="application/rss+xml"/>
-    <pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
-    <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
-    <generator>Jekyll v{{ jekyll.version }}</generator>
-    {% for post in site.posts limit:10 %}
+    <title>Open Sourcerers&apos; Guild</title>
+    <description>A Jekyll theme for content-rich sites</description>
+    <link>/</link>
+    <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Sat, 25 Jun 2022 10:25:00 -0400</pubDate>
+    <lastBuildDate>Sat, 25 Jun 2022 10:25:00 -0400</lastBuildDate>
+    <generator>Jekyll v4.2.2</generator>
+    
       <item>
-        <title>{{ post.title | xml_escape }}</title>
-        <description>{{ post.content | xml_escape }}</description>
-        <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
-        <link>{{ post.url | prepend: site.baseurl | prepend: site.url }}</link>
-        <guid isPermaLink="true">{{ post.url | prepend: site.baseurl | prepend: site.url }}</guid>
-        {% for tag in post.tags %}
-        <category>{{ tag | xml_escape }}</category>
-        {% endfor %}
-        {% for cat in post.categories %}
-        <category>{{ cat | xml_escape }}</category>
-        {% endfor %}
+        <title>Dactyl Manuform review</title>
+        <description>&lt;p&gt;&lt;span class=&quot;newthought&quot;&gt;The Dactyl Manuform&lt;/span&gt;  is not a name of some dinosaur, it’s a keyboard!. A split, ortholinear, opensource keyboard to be exact. I have used one for around a year now, and will review my experience using it. &lt;!--more--&gt;&lt;/p&gt;
+
+&lt;figure&gt;&lt;img src=&quot;/assets/posts/2022-03-27-Dactyl-Manuform-Review/dactyl-manuform.webp&quot; /&gt;&lt;figcaption class=&quot;maincolumn-figure&quot;&gt;A 5x6 Dactyl Manuform,&lt;em&gt; Source: &lt;a href=&quot;https://imgur.com/a/CxKToO2&quot;&gt;https://imgur.com/a/CxKToO2&lt;/a&gt; (Has pictures of wiring, and its making as well.)&lt;/em&gt;&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;h1 id=&quot;the-what&quot;&gt;The What&lt;/h1&gt;
+
+&lt;p&gt;&lt;label for=&quot;mf-id-1&quot; class=&quot;margin-toggle&quot;&gt;⊕&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;mf-id-1&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;marginnote&quot;&gt;&lt;img class=&quot;fullwidth&quot; src=&quot;/assets/posts/2022-03-27-Dactyl-Manuform-Review/my-dactyl-blue.webp&quot; /&gt;&lt;br /&gt;My 5x7 Dactyl Manuform both sides, blue highlighted.&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;Dactyl Manuform’s come in a variety of flavors. Mine is a 5x7 one. I opted for blank key caps and the key switches are silent alpacas. The key switches came lubed from the maker. I bought it off r/mechmarket on Reddit. It took a while to ship to where I was, months longer than the estimate which made me and the seller both a little worried that the postal service lost the package. When it did get here one of the bottom plates was slightly bent (probably due to the heat in transport), my Dactyl Manuform is 3d printed so what I did was hold the plate to a candle and bend it the correct way, I don’t recommend this, but it did work. The board came pre-flashed, so I just had to plug it in and start typing. You could make your own, but I didn’t have the recources, experience or will to figure it out.&lt;/p&gt;
+
+&lt;figure&gt;&lt;img src=&quot;/assets/posts/2022-03-27-Dactyl-Manuform-Review/my-dactyl.webp&quot; /&gt;&lt;figcaption class=&quot;maincolumn-figure&quot;&gt;One side of my 5x7 Dactyl Manuform, with its purple highlighted.&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;If you look closer you can see that the thumb cluster is different from a usual Dactyl Manuform’s. Why? I have no idea. I haven’t used a normal Dactyl so can’t really compare thumb cluster feel. It cost around 300 USD, pretty pricey for a keyboard, but not for a dactyl. Not hotswapable.&lt;/p&gt;
+
+&lt;h1 id=&quot;the-why&quot;&gt;The Why&lt;/h1&gt;
+
+&lt;p&gt;&lt;label for=&quot;mf-id-1&quot; class=&quot;margin-toggle&quot;&gt;⊕&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;mf-id-1&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;marginnote&quot;&gt;&lt;img class=&quot;fullwidth&quot; src=&quot;/assets/posts/2022-03-27-Dactyl-Manuform-Review/corne.webp&quot; /&gt;&lt;br /&gt;The IMK Corne in Charcoal.&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;label for=&quot;mf-id-1&quot; class=&quot;margin-toggle&quot;&gt;⊕&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;mf-id-1&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;marginnote&quot;&gt;&lt;img class=&quot;fullwidth&quot; src=&quot;/assets/posts/2022-03-27-Dactyl-Manuform-Review/sofle.webp&quot; /&gt;&lt;br /&gt;The SofleKeyboard.&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;I was looking to switch my keyboard to avoid RSI and wrist pain. First learned about ortholinear keyboards like the Planck, then learnt about split keyboards such as the Corne. Didn’t really need the portability of a Corne and the time I tried to buy a Sofle the seller couldn’t ship it to me. Then heard a lot of good things about the Dactly Manuform, people saying it saved their wrists ect. so decided to buy that. Already could type at around 70wpm, without looking at the keyboard, so going for a blank keycapped one was not an issue.&lt;/p&gt;
+
+&lt;h1 id=&quot;the-review&quot;&gt;The review&lt;/h1&gt;
+
+&lt;p&gt;I really like the keyboard, when I have to use a normal keyboard, I miss using the dactyl. It has allowed me to get to a better posture easier also my wrists and carpal tunnel don’t feel strained while using it. There is a learning curve but depending on your priorities it should be easy to get over. I didn’t have any typing bad habits when starting out(for example hitting G with your right hand) that might have made it easier for me to adapt. It is a bit pricey, but it was worth it will continue to be worth it if it means I don’t get RSI, health is important. However, these are 3D printed and handwired so quality might vary from seller to seller significantly. Furthermore, because I got the 5x7 I don’t have to switch layers to use the number keys, if I got a smaller layout board this will also add to the learning curve.&lt;/p&gt;
+
+&lt;p&gt;Now for the downsides. Firstly it’s not very portable. You can’t carry it around, it’s big, it’s bulky and 3D printed stuff reacts badly to heat. If you want a quick switch this keyboard is not it, there is a learning curve as stated before. It is expensive and is hard to find, specially if you live in a country far from the US. If you want one made to your specification the queues often stretch for months. Some people are uncomfortable with the thumb cluster, I found the thumb cluster rather pleasant and useful. But my thumb cluster as previously stated is a bit different from the norm.&lt;/p&gt;
+
+&lt;p&gt;In short if you think you’d use it and can put the effort to learn how to use it do get it. It is important to check the quality of the makers work because it might differ from place to place. And if you do get one I hope you have fun using it! Meanwhile, hopefully I grow enough confidence to flash the keyboard with an alternate keyboard layout (looking at you colemak-dh).&lt;/p&gt;
+</description>
+        <pubDate>Sun, 15 May 2022 05:46:04 -0400</pubDate>
+        <link>/articles/22/Dactyl-Manuform-Review</link>
+        <guid isPermaLink="true">/articles/22/Dactyl-Manuform-Review</guid>
+        
+        
+        <category>keyboard</category>
+        
+        <category>open-sourcers-chronicle</category>
+        
       </item>
-    {% endfor %}
+    
+      <item>
+        <title>Deploying a Jekyll site to GitHub Pages with Rake</title>
+        <description>&lt;p&gt;&lt;span class=&quot;newthought&quot;&gt;Deploying to GitHub pages&lt;/span&gt;  was more complicated than I expected. This was because the jekyll theme used plugins that github pages did not support, so the site had to be deployed by using the static _site folder generated by jekyll &lt;!--more--&gt;when the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jekyll build&lt;/code&gt; command is used instead of just pushing the whole project and letting github build it.&lt;/p&gt;
+
+&lt;h2 id=&quot;how-it-works&quot;&gt;How it works&lt;/h2&gt;
+&lt;p&gt;A Rakefile contains the publish function (can be run via &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rake publish&lt;/code&gt; on the terminal) which, generates the site; moves the content of _site into a temp directory; checks out a branch called gh-pages; removes all the content in gh-pages; moves the contents of the temp directory into gh-pages; commits and pushes gh-pages; checks out main; prints yolo;
+If you use a custom domain for your gh-pages site, you need to have the CNAME file on the main branch and the publish function will move the CNAME file into the temp directory as well ensuring the CNAME file is reput in gh-pages after its contents are deleted. Here is the Rakefile:&lt;/p&gt;
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;require&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;rubygems&apos;&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;require&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;rake&apos;&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;require&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;rdoc&apos;&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;require&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;date&apos;&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;require&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;yaml&apos;&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;require&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;tmpdir&apos;&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;require&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;jekyll&apos;&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;desc&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Generate blog files&quot;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;task&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:generate&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
+  &lt;span class=&quot;no&quot;&gt;Jekyll&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Site&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Jekyll&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;configuration&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
+    &lt;span class=&quot;s2&quot;&gt;&quot;source&quot;&lt;/span&gt;      &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;.&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;s2&quot;&gt;&quot;destination&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;_site&quot;&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;})).&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;process&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+
+
+&lt;span class=&quot;n&quot;&gt;desc&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Generate and publish blog to gh-pages&quot;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;task&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:publish&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:generate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
+  &lt;span class=&quot;no&quot;&gt;Dir&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;mktmpdir&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tmp&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;
+    &lt;span class=&quot;nb&quot;&gt;system&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;mv _site/* &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tmp&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;# uncomment if you have a CNAME file&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;# system &quot;mv CNAME #{tmp}&quot;&lt;/span&gt;
+    &lt;span class=&quot;nb&quot;&gt;system&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;git checkout -B gh-pages&quot;&lt;/span&gt;
+    &lt;span class=&quot;nb&quot;&gt;system&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;rm -rf *&quot;&lt;/span&gt;
+    &lt;span class=&quot;nb&quot;&gt;system&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;mv &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tmp&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;/* .&quot;&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;message&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Site updated at &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Time&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;now&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;utc&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+    &lt;span class=&quot;nb&quot;&gt;system&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;git add .&quot;&lt;/span&gt;
+    &lt;span class=&quot;nb&quot;&gt;system&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;git commit -am &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;shellescape&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+    &lt;span class=&quot;nb&quot;&gt;system&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;git push origin gh-pages --force&quot;&lt;/span&gt;
+    &lt;span class=&quot;nb&quot;&gt;system&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;git checkout main&quot;&lt;/span&gt;
+    &lt;span class=&quot;nb&quot;&gt;system&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;echo yolo&quot;&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;task&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:default&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:publish&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;It should be placed at the highest level in your jekyll projects’ directory.&lt;/p&gt;
+
+&lt;h2 id=&quot;github-pages-settings&quot;&gt;GitHub Pages settings&lt;/h2&gt;
+&lt;p&gt;After running the above script by typing &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rake publish&lt;/code&gt; on the terminal, your GitHub Pages setting also need to be configured. Go to your repository, navigate to Settings &amp;gt; Pages. Under the Source section you will be able to set which branch the site is gets built from, set that to be gh-pages.&lt;/p&gt;
+
+&lt;h2 id=&quot;using-with-a-custom-domain&quot;&gt;Using with a custom domain&lt;/h2&gt;
+&lt;p&gt;You can set-up a custom domain for your site by following the instructions outlined by GitHub in their &lt;a href=&quot;https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site&quot;&gt;GitHub Pages documentation&lt;/a&gt;. After you set a custom domain a CNAME file will be generated for the gh-pages branch, you need to copy that file into the main branch(in the same place where the Rakefile is). In the Rakefile uncomment &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;system &quot;mv CNAME #{tmp}&quot;&lt;/code&gt;, by deleting the hashtag and space at the start of the line. This line copies the CNAME file into gh-pages when publish is used. There might be other ways to have the CNAME file in gh-pages but this is the method I use.&lt;/p&gt;
+
+&lt;p&gt;The original Rakefile comes from the &lt;a href=&quot;https://github.com/clayh53/tufte-jekyll&quot;&gt;tufte-jekyll&lt;/a&gt; repository, I modified it to account for the CNAME file and also work with “main” instead of “master”.&lt;/p&gt;
+&lt;div class=&quot;post-author&quot;&gt;Jason Carvalho&lt;/div&gt;
+</description>
+        <pubDate>Sat, 11 Dec 2021 19:00:00 -0500</pubDate>
+        <link>/articles/21/Deploying-to-github-pages-with-Rake</link>
+        <guid isPermaLink="true">/articles/21/Deploying-to-github-pages-with-Rake</guid>
+        
+        
+        <category>jekyll</category>
+        
+        <category>open-sourcers-chronicle</category>
+        
+      </item>
+    
+      <item>
+        <title>Different wallpaper for each screen in Qtile</title>
+        <description>&lt;p&gt;&lt;span class=&quot;newthought&quot;&gt;I use &lt;a href=&quot;http://www.qtile.org/&quot;&gt;Qtile&lt;/a&gt;&lt;/span&gt; &lt;label for=&quot;One&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;One&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;sidenote&quot;&gt;Qtile is a free and open source tiling window manager written in python. Refer: &lt;a href=&quot;http://www.qtile.org/&quot;&gt;http://www.qtile.org&lt;/a&gt; &lt;/span&gt; as the window manager for my system. The system is a laptop with one monitor connected via HDMI, but sometimes just the laptop. When I first installed Qtile I tried to set the wallpapers and failed. &lt;!--more--&gt; I could get the same wallpaper on both the laptop and HDMI display but not 2 different ones. Since then with a bit of python I have achieved that. The process is documented here.
+I’m assuming you already have installed and set up qtile. All the code can be found in this repo: &lt;a href=&quot;https://github.com/JasonCarvalho-tech/qtile-config/tree/main&quot;&gt;https://github.com/JasonCarvalho-tech/qtile-config/tree/main&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;tldr-setting-the-wallpaper&quot;&gt;TLDR: Setting the wallpaper&lt;/h2&gt;
+&lt;p&gt;The wallpaper can be set by using a package called &lt;a href=&quot;https://wiki.archlinux.org/title/Feh&quot;&gt;feh&lt;/a&gt;. If you use Arch Linux the package can be installed through the terminal by:&lt;/p&gt;
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;pacman &lt;span class=&quot;nt&quot;&gt;-Sy&lt;/span&gt; feh
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;After installing wallpapers for 2 screens for instance can be set by running:&lt;/p&gt;
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;feh &lt;span class=&quot;nt&quot;&gt;--bg-center&lt;/span&gt; path/to/file/for/first/monitor path/to/file/for/second/monitor
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Instead of the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;--bg-center&lt;/code&gt; flag you could use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;--bg-max&lt;/code&gt; or &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;--bg-fill&lt;/code&gt; among others. Refer the &lt;a href=&quot;https://wiki.archlinux.org/title/Feh&quot;&gt;ArchWiki article&lt;/a&gt; for more examples or type:&lt;/p&gt;
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;feh &lt;span class=&quot;nt&quot;&gt;--help&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;to see more information about the flags and other options.
+Note that the wallpapers set will be lost every session. The rest of this post will detail how to retain the wallpaper for the next session and then later how to program the wallpaper to change every day. Both of these processes are done by listening to qtile startup via hooks qtile provides.&lt;/p&gt;
+
+&lt;h2 id=&quot;setting-up-the-screens&quot;&gt;Setting up the screens.&lt;/h2&gt;
+&lt;p&gt;Before setting up the screens, a script is run that will use xrandr to set the second screen’s resolution and relative position to my laptop screen. I have put this script in my bin directory(which is in my PATH) so I can run it directly from console. The file is called acer-screen and these are it’s contents.&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;#!/bin/bash&lt;/span&gt;
+xrandr &lt;span class=&quot;nt&quot;&gt;--output&lt;/span&gt; HDMI1 &lt;span class=&quot;nt&quot;&gt;--mode&lt;/span&gt; 1280x960 &lt;span class=&quot;nt&quot;&gt;--right-of&lt;/span&gt; eDP1 &lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; xrandr &lt;span class=&quot;nt&quot;&gt;--output&lt;/span&gt; HDMI-1-1 &lt;span class=&quot;nt&quot;&gt;--mode&lt;/span&gt; 1280x960 &lt;span class=&quot;nt&quot;&gt;--right-of&lt;/span&gt; eDP-1-1 &lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; xrandr &lt;span class=&quot;nt&quot;&gt;--output&lt;/span&gt; HDMI-1 &lt;span class=&quot;nt&quot;&gt;--mode&lt;/span&gt; 1280x960 &lt;span class=&quot;nt&quot;&gt;--right-of&lt;/span&gt; eDP-1
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;the main command is &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;xrandr --ouput HDMI1 --mode 1280x960 --right-of eDP1&lt;/code&gt; which sets the resolution of my second monitor, called HDMI1, to 1280 by 960 and sets it to the right of my laptop. The command is repeated with HDMI-1-1, eDP-1-1 and HDMI-1, eDP-1 because my monitor names change for some reason when I use &lt;a href=&quot;https://github.com/Askannz/optimus-manager&quot;&gt;optimus-manager&lt;/a&gt; to switch my graphics card mode, repeating the command with the alternate HDMI1 and eDP1 names will not be necessary if you don’t use optimus manager. You might also have to change the resolution based on your monitor. Have a look at the ArchWiki post for more information on xrandr or use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;xrandr --help&lt;/code&gt;. We will call this script when we start qtile when the system starts.&lt;/p&gt;
+
+&lt;h2 id=&quot;creating-the-python-module&quot;&gt;Creating the python module&lt;/h2&gt;
+&lt;p&gt;Instead of running the code directly in the qtile config.py file, we could run the code by making a module and then importing and running a function of the module in the qtile config file. This might make additional features easier to add. And also makes testing easier. You can test by running a test.py file that contains the import to the module and the functions. I created this module in the same directory as the qtile config file, which in my case is in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;~/.config/qtile/config.py&lt;/code&gt;. Here is the directory structure for the module.&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;qtilehelper/
+|-screens.py
+|-__init__.py
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;The __init__.py file contains the following code:&lt;/p&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;screens&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;screens.py will contain the code to set up the screens and another function to set the wallpaper based on the day.&lt;/p&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;os&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;datetime&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;gi&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;gi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;require_version&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Gdk&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;3.0&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;gi.repository&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Gdk&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;setupScreens&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;():&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Gdk&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Display&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;get_default&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;get_n_monitors&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;os&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;system&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;acer-screen&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;setWallpaper&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;():&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;path&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;/home/jason/Personal/Pictures/wallpaper/&apos;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;#path to your wallpaper files
+&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;wallpapers&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;os&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;listdir&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;day&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;datetime&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;datetime&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;now&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;timestamp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;//&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;86400&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;wallpaper1_path&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;path&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;wallpapers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;day&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;wallpapers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)]&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Gdk&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Display&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;get_default&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;get_n_monitors&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;wallpaper2_path&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;path&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;wallpapers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;day&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;wallpapers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;os&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;system&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;feh --bg-max &apos;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;wallpaper1_path&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos; &apos;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;wallpaper2_path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;os&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;system&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;feh --bg-max &apos;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;wallpaper1_path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;setupScreens()&lt;/code&gt; is pretty self explanitory, it checks if there are 2 screens and if there are it runs the command &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;acer-screen&lt;/code&gt;.
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;setWallpaper()&lt;/code&gt; needs a little bit of explanation. You need to set the path variable to wherever you wallpapers are stored. The day variable contains the number of days that has elapsed since January 1, 1970, we get this by dividing a POSIX timestamp by the number of seconds in a day(86400). Finding the modulus of this value and the ammount of files in the wallpaper directory we will get the wallpaper for the day. The if statement checks if there are 2 monitors, if there are 2, the script substracts 1 to get the wallpaper for my external monitor, and runs the command to set wallpapers for both screens. If there is only one monitor the command is run to set the wallpaper for one monitor.&lt;/p&gt;
+
+&lt;h2 id=&quot;using-the-module-in-the-config-with-hooks&quot;&gt;Using the module in the config with hooks&lt;/h2&gt;
+&lt;p&gt;In order to run code when events occur in qtile, you have to utilize &lt;a href=&quot;https://docs.qtile.org/en/v0.18.0/manual/ref/hooks.html#ref-hooks&quot;&gt;hooks&lt;/a&gt;. The 2 hooks of intrest to us are &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;startup\_once()&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;startup()&lt;/code&gt;. We will attach &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;setupScreens()&lt;/code&gt; to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;startup\_once()&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;setWallpaper()&lt;/code&gt; to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;startup()&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Why do we set the functions to seperate hooks?
+I too thought we could just set both to startup but this presents a problem. Let’s say for some reason we want to set up a second monitor differently than in acer-screen, maybe it is a different monitor with a different resolution. We could set that monitor up using &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;xrandr&lt;/code&gt; after start up and attempt to set the monitors by pressing &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Mod+Ctrl+r&lt;/code&gt; which will restart Qtile. Now we will hit a problem because the startup function will trigger and if we attached &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;setupScreens()&lt;/code&gt; to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;startup()&lt;/code&gt; the chages we made using xrandr will be undone because &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;acer-screen&lt;/code&gt; will be run.
+To prevent this I attached &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;setupScreens()&lt;/code&gt; to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;startup\_once()&lt;/code&gt; which only runs the first time qtile runs when you startup your computer.
+Here is the code for &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;config.py&lt;/code&gt;, i.e. your qtile config file. I’ve only put the top portion as there is quite a lot of code in that file.&lt;/p&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;typing&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;List&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;# noqa: F401
+&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;libqtile&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;bar&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;layout&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;widget&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;hook&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;libqtile.config&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Click&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Drag&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Group&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Key&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Match&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Screen&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;libqtile.lazy&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;lazy&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;libqtile.utils&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;guess_terminal&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# custom imports
+&lt;/span&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;qtilehelper&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;helper&lt;/span&gt;
+
+&lt;span class=&quot;o&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hook&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;subscribe&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;startup_once&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;autostart&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;():&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;helper&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;screens&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;setupScreens&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+
+&lt;span class=&quot;o&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hook&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;subscribe&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;startup&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;autostart&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;():&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;helper&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;screens&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;setWallpaper&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;I have modified the default config file by placing the above code in the top right after the copyright notice. The wallpaper got applied when I restarted my computer.
+Here is the repo with all the code: &lt;a href=&quot;https://github.com/JasonCarvalho-tech/qtile-config/tree/main&quot;&gt;https://github.com/JasonCarvalho-tech/qtile-config/tree/main&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&quot;post-author&quot;&gt;Jason Carvalho&lt;/div&gt;
+</description>
+        <pubDate>Sat, 06 Nov 2021 06:00:00 -0400</pubDate>
+        <link>/articles/21/Qtile-wallpaper</link>
+        <guid isPermaLink="true">/articles/21/Qtile-wallpaper</guid>
+        
+        
+        <category>qtile</category>
+        
+        <category>python</category>
+        
+        <category>linux</category>
+        
+      </item>
+    
+      <item>
+        <title>Hello World - Jekyll</title>
+        <description>&lt;p&gt;&lt;span class=&quot;newthought&quot;&gt;Hello World!&lt;/span&gt;  This is the first post in this website and my first time working with the open source static site generator &lt;a href=&quot;https://jekyllrb.com/&quot;&gt;jekyll&lt;/a&gt;. Jekyll is written in &lt;a href=&quot;https://www.ruby-lang.org/en/&quot;&gt;Ruby&lt;/a&gt;, which I haven’t worked with before either so starting with hello world is appropriate. &lt;!--more--&gt; I’ll go through the steps it took to get this page up and running.&lt;/p&gt;
+
+&lt;h2 id=&quot;installing-the-prerequisites&quot;&gt;Installing the prerequisites&lt;/h2&gt;
+
+&lt;p&gt;First I had to install Jekyll the process was relatively pain free. I run Arch Linux on my system so I had a look at the ArchWiki&lt;label for=&quot;1&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;1&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;sidenote&quot;&gt;The &lt;a href=&quot;https://wiki.archlinux.org/&quot;&gt;ArchWiki&lt;/a&gt; is where you can find documentation on Arch Linux, anyone can add and modify the documentation. &lt;/span&gt; and conviniently found a page on Jekyll. It gave me the &lt;a href=&quot;https://wiki.archlinux.org/title/Jekyll#Installation&quot;&gt;install instructions&lt;/a&gt; necessary. I had to install the ruby package add ruby to $PATH and then run a couple of commands to install Jekyll. The commands I had to run were:&lt;/p&gt;
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;gem update
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;gem &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;jekyll
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;gem &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;bundler
+&lt;span class=&quot;c&quot;&gt;# run in the directory with the jekyll site you config later&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;bundle update
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h2 id=&quot;choosing-and-setting-up-a-jekyll-theme&quot;&gt;Choosing and setting-up a Jekyll theme&lt;/h2&gt;
+
+&lt;p&gt;There a multitude of sites to choose your Jekyll theme from, some paid but also a lot of free open source onces. The one I chose of this site is &lt;a href=&quot;https://github.com/clayh53/tufte-jekyll&quot;&gt;tufte-jekyll&lt;/a&gt;. I did some modifications to it, which we will deal with later. For now just clone the repo and navigate to the directory. Now you can run&lt;/p&gt;
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;bundle update
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Ruby 3.0 does not come with webrick so you need to use bundle to get it, run&lt;/p&gt;
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;bundle add webrick
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;After that you can run these two commands to start up and view your page:&lt;/p&gt;
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;jekyll build
+jekyll serve &lt;span class=&quot;nt&quot;&gt;-w&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Then point to your broswer to the address specified as “Server address:”. If everything went fine you will now see your site there.&lt;/p&gt;
+
+&lt;h2 id=&quot;making-a-new-post-and-customizing-things&quot;&gt;Making a new post and customizing things&lt;/h2&gt;
+
+&lt;p&gt;Posts are in the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/_posts/&lt;/code&gt; directory, in the tufte-jekyll theme I used there were example posts, I used that as a template for this one. In the _config.yml file you can set things like the name of the site and the name of the author. Again speaking for tufte-jekyll there was a file &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/_data/social.yml&lt;/code&gt; that you use to point the urls to your socials.&lt;/p&gt;
+
+&lt;h3 id=&quot;adding-a-favicon&quot;&gt;Adding a Favicon.&lt;/h3&gt;
+
+&lt;p&gt;I designed a favicon in &lt;a href=&quot;https://krita.org/en/&quot;&gt;Krita&lt;/a&gt;, an free and open source digital art program; then followed a blog article by Paul Cochrane &lt;a href=&quot;https://ptc-it.de/add-favicon-to-mm-jekyll-site/&quot;&gt;https://ptc-it.de/add-favicon-to-mm-jekyll-site/&lt;/a&gt;&lt;a href=&quot;http://web.archive.org/web/20210614083222/https://ptc-it.de/add-favicon-to-mm-jekyll-site/&quot;&gt;Archived&lt;/a&gt;, that article is more detailed and shows how to handle the website icon for a multitude of different browsers.
+Get the images you want to use, put it in the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/assets/img/&lt;/code&gt; folder. There are multiple favicon generator sites that allow to make a favicon from scratch or use an image to generate one. After placing the favicon in the img direcory open up &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/_includes/head.html&lt;/code&gt; and insert this line anywhere under the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;head&amp;gt;&lt;/code&gt; tag (I chose line 7).&lt;/p&gt;
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;link&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;rel=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;icon&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;image/png&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;sizes=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;32x32&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/assets/img/favicon-32x32.png&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;I put this in after line 7, you can put it anywhere under the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;head&amp;gt;&lt;/code&gt; tag.&lt;/p&gt;
+
+&lt;h3 id=&quot;making-a-plugin-for-post-author&quot;&gt;Making a plugin for post author&lt;/h3&gt;
+
+&lt;p&gt;I also wanted an author to be present in every article for that I made a custom plugin that reads a tag. When I type&lt;/p&gt;
+&lt;div class=&quot;language-md highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;post-author&apos;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;Author name&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;in the post.md file it will appear as&lt;/p&gt;
+&lt;div class=&quot;post-author&quot;&gt;Author name&lt;/div&gt;
+&lt;p&gt;to acheive this I needed to make a plugin and edits to the css file, I did this all on tufte-jekyll as I have no other experience with jekyll I don’t know how it will transfer to other themes ect.
+To make the plugin make a file called &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;postauthor.rb&lt;/code&gt; in the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/_plugins&lt;/code&gt; directory. Then add these lines I’ve added comments to make it easy to digest.&lt;/p&gt;
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;## Liquid tag &apos;postauthor&apos; used to add an block to credit the author&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;## in the main text area of the layout&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;## Usage &amp;lt;div class=&apos;post-author&apos;&amp;gt;Author Name&amp;lt;/div&amp;gt;&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;module&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;Jekyll&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;RenderPostAuthorTag&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Liquid&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Tag&lt;/span&gt;
+
+&lt;span class=&quot;nb&quot;&gt;require&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;shellwords&quot;&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;initialize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tag_name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tokens&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;super&lt;/span&gt;
+      &lt;span class=&quot;vi&quot;&gt;@text&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;shellsplit&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;render&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;context&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;s2&quot;&gt;&quot;&amp;lt;div class=&apos;post-author&apos;&amp;gt;&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;vi&quot;&gt;@text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;lt;/div&amp;gt;&quot;&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+
+&lt;span class=&quot;no&quot;&gt;Liquid&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Template&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;register_tag&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&apos;postauthor&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Jekyll&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;RenderPostAuthorTag&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Open the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;css/tufte.scss&lt;/code&gt; file and add these lines to style the author tag. You can modify the styles according to your needs.&lt;/p&gt;
+&lt;div class=&quot;language-scss highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;div&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;.post-author&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;80%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;padding-left&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;.5%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;padding-right&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;.5%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;padding-top&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;text-align&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;right&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;margin-right&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;-60%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;font-variant&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;small-caps&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;font-size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;.2em&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;letter-spacing&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;.05rem&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;font-style&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;italic&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
+
+&lt;p&gt;That’s it, there is a lot of work to do on this site, it’s very scuffed at the moment. If I do make it a repository with the sites code I’ll link it here&lt;img src=&quot;https://github.com/JasonCarvalho-tech/open-sourcerers-guild&quot; alt=&quot;repo&quot; /&gt; Now to reap what I’ve sown and close this post off with the author tag I created :)&lt;/p&gt;
+&lt;div class=&quot;post-author&quot;&gt;Jason Carvalho&lt;/div&gt;
+</description>
+        <pubDate>Sat, 16 Oct 2021 05:46:04 -0400</pubDate>
+        <link>/articles/21/Hello-World-Jekyll</link>
+        <guid isPermaLink="true">/articles/21/Hello-World-Jekyll</guid>
+        
+        
+        <category>jekyll</category>
+        
+        <category>open-sourcers-chronicle</category>
+        
+      </item>
+    
   </channel>
 </rss>
